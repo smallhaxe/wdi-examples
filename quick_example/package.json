@@ -1,0 +1,22 @@
+{
+  "name": "quick_example",
+  "version": "1.0.0",
+  "description": "quick in-class express example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smallhaxe/wdi-examples.git"
+  },
+  "author": "smallhaxe",
+  "license": "bsd",
+  "bugs": {
+    "url": "https://github.com/smallhaxe/wdi-examples/issues"
+  },
+  "homepage": "https://github.com/smallhaxe/wdi-examples",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
