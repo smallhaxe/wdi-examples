@@ -14,8 +14,10 @@ var tacos = [
     'Super Taco',
 ];
 
-var ramen = [
-    
+var ramens = [
+    'Pork',
+    'Chicken',
+    'Beef',
 ];
 
 app.get('/burgers', function(req, res) {
@@ -26,6 +28,29 @@ app.get('/burgers', function(req, res) {
 app.get('/tacos', function(req, res) {
     // send all the burgers!
     res.send(tacos.join(', '));
+});
+
+app.get('/ramen', function(req, res) {
+    // send all the ramen!
+    res.send(ramens.join(', '));
+});
+
+app.get('/greet/:name', function (req, res) {
+    res.send('Hello, ' + req.params.name);
+});
+
+app.get('/tacos/:index', function (req, res) {
+    res.send(tacos[req.params.index]);
+});
+
+app.get('/burgers/:index', function (req, res) {
+    res.send(burgers[req.params.index]);
+});
+
+app.get('/ramen/:index', function (req, res) {
+    var id = req.params.index;
+    var ramen = ramens[id]; 
+    res.send(ramen);
 });
 
 // a "GET" request to "/" will run the function below
