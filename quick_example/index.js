@@ -53,6 +53,25 @@ app.get('/ramen/:index', function (req, res) {
     res.send(ramen);
 });
 
+app.get('/thank', function (req, res) {
+    var name = req.query.name;
+    res.send('Thank you, ' + name + '!');
+});
+
+app.get('/multiply', function (req, res) {
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
+    var result = x * y;
+    res.send(x + ' times ' + y + ' is ' + result + '!');
+});
+
+app.get('/add', function (req, res) {
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
+    var result = x + y;
+    res.send(x + ' plus ' + y + ' is ' + result + '!');
+});
+
 // a "GET" request to "/" will run the function below
 app.get("/", function (req, res) {
     // send back the response: 'Hello, World!'
@@ -61,5 +80,5 @@ app.get("/", function (req, res) {
 
 // start the server
 app.listen(3000, function() {
-    console.log('Going to localhost:3000/');
+    console.log('Go to localhost:3000/');
 })
