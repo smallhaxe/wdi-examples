@@ -1,7 +1,7 @@
 var testArr = []
 
 function genArr() {
-    for (var i = 0; i <= 100; i++) {
+    for (var i = 0; i < 100; i++) {
         testArr.push(Math.floor(Math.random() * 100))
     }
     console.log(testArr)
@@ -16,6 +16,7 @@ function sortArr(arr) {
     arr.sort(function(a, b){
         return a - b;
     })
+    return arr;
 }
 
 function bs(arr, val) {
